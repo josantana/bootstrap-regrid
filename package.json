@@ -1,6 +1,6 @@
 {
   "name": "bootstrap-regrid",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Bootstrap consistent grid columns on nesting.",
   "author": "Jo Santana <josantana@jogalabs.com> (http://josantana.net)",
   "license": "MIT",
