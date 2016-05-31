@@ -2,4 +2,4 @@
 !/dist
 /test
 gulpfile.js
-/source/bootstrap-regrid.scss
+source/*.scss
