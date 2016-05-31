@@ -1,5 +1,5 @@
 .gitignore
 !/dist
-!/map
-/source/*.scss
 /test
+gulpfile.js
+/source/bootstrap-regrid.scss
