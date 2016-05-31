@@ -1,0 +1,35 @@
+@charset 'UTF-8';
+
+// Bootstrap mixins
+@import '../../node_modules/bootstrap/scss/mixins';
+
+// reGRID mixins
+
+@mixin make-consistent-grid-columns ($columns: $grid-columns, $gutter: $grid-gutter-width, $breakpoints: $grid-breakpoints) {
+
+    @each $breakpoint in map-keys($breakpoints) {
+
+        @include media-breakpoint-up($breakpoint) {
+
+            @for $i from $columns through 1 {
+                @for $j from $i through 1 {
+                    .col-#{$breakpoint}-#{$i} .row .col-#{$breakpoint}-#{$j} {
+                        @include make-col-span($j, $i);
+                    }
+                }
+            }
+
+            @each $modifier in (pull, push, offset) {
+                @for $i from 0 through $columns {
+                    @for $j from $i through 1 {
+                        @if $i != 0 {
+                            .col-#{$breakpoint}-#{$i} .row .col-#{$breakpoint}-#{$modifier}-#{$j} {
+                                @include make-col-modifier($modifier, $j, $i);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
