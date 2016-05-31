@@ -4,7 +4,7 @@
   "description": "Bootstrap consistent grid columns on nesting.",
   "author": "Jo Santana <josantana@jogalabs.com> (http://josantana.net)",
   "license": "MIT",
-  "main": "source/bootstrap-regrid.scss",
+  "main": "source/regrid/_regrid.scss",
   "homepage": "https://github.com/josantana/bootstrap-regrid",
   "keywords": [
     "bootstrap",
