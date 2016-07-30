@@ -14,7 +14,7 @@
             @for $i from $columns through 1 {
                 @for $j from $i through 1 {
                     .col-#{$breakpoint}-#{$i} .row .col-#{$breakpoint}-#{$j} {
-                        @include make-col-span($j, $i);
+                        @include make-col($j, $i);
                     }
                 }
             }
